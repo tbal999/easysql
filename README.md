@@ -8,8 +8,8 @@ then use as following:
 
 rowcount, output, error := easysql.SQLquery("login string", "query)
 
-rowcount = int which tells you how many rows pulled
-output = []string, the result of the SQL query (including column headers)
+- rowcount = int which tells you how many rows pulled
+- output = []string, the result of the SQL query (including column headers)
 
 You can work with output using type conversion to change items from string to int or float or whatever you want.
 
