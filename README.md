@@ -5,8 +5,10 @@ Currently uses the MSSQL driver: github.com/denisenkom/go-mssqldb
 Simply import it into your go project.
 
 then use as following:
-
-rowcount, output, error := easysql.SQLquery("login string", "query)
+- login string is the connection i.e "Server=localhost;Database=master;Trusted_Connection=True"
+- query is the SQL query in full
+ 
+rowcount, output, error := easysql.SQLquery("login string", "query")
 
 - rowcount = int which tells you how many rows pulled
 - output = []string, the result of the SQL query (including column headers)
