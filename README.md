@@ -1,5 +1,5 @@
 # easysql
-easiliy work with sql in go with this
+Easily work with sql in go with this!
 Currently uses the MSSQL driver: github.com/denisenkom/go-mssqldb
 
 Simply import it into your go project.
