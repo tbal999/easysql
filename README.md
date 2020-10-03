@@ -23,7 +23,7 @@ sqlLogin := `Server=localhost;Database=master;Trusted_Connection=True;`
 
 sqlQuery := `SELECT TABLE.COLUMN FROM TABLE`
 
-numberOfRowsRetrieved, Result, err := backendsql.SQLquery(sqlLogin, sqlQuery)
+numberOfRowsRetrieved, Result, err := easysql.SQLquery(sqlLogin, sqlQuery)
 
 ```
 
