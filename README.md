@@ -19,12 +19,31 @@ You can work with output using type conversion to change items from string to in
 Literal example:
 
 ```
-sqlLogin := `Server=localhost;Database=master;Trusted_Connection=True;`
+package main
 
-sqlQuery := `SELECT TABLE.COLUMN FROM TABLE`
+import (
+	"fmt"
 
-numberOfRowsRetrieved, Result, err := easysql.SQLquery(sqlLogin, sqlQuery)
+	"github.com/tbal999/easysql"
+)
 
+func main() {
+	sqlLogin := `Server=localhost;Database=master;Trusted_Connection=True;`
+
+	sqlQuery := `SELECT COLUMN FROM TABLE`
+
+	numberOfRows, result, err := easysql.SQLquery(sqlLogin, sqlQuery)
+
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	for index := range result {
+		fmt.Println(result[index])
+	}
+
+	fmt.Printf("Grabbed %d rows", numberOfRows)
+}
 ```
 
 This library can't handle all formats (or at least i haven't figured out how to make it work yet) - for example datetime - so if you have a DATETIME output in SQL just change it to VARCHAR and it will work.
