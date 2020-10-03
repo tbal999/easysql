@@ -102,10 +102,10 @@ func typeswitch(x reflect.Value, lastitem bool) string {
 				text += x.Elem().String() + ","
 			case "bool":
 				text += strconv.FormatBool(x.Elem().Bool()) + ","
-			case "time.Time":
-				text += "(Change_to_VARCHAR)," //Reflecting to time.Time value doesn't seem to work as far as I can see.
-				//timestring, _ := reflect.ValueOf(x.Index(ii).Elem()).Interface().(time.Time)
-				//fmt.Println(timestring)
+			//case "time.Time":
+			//	text += "_datetime_(Change_to_VARCHAR)," //Reflecting to time.Time value doesn't seem to work as far as I can see.
+			//	//timestring, _ := reflect.ValueOf(x.Index(ii).Elem()).Interface().(time.Time)
+			//	//fmt.Println(timestring)
 			case "int64":
 				text += strconv.FormatInt(x.Elem().Int(), 10) + ","
 			case "float64":
@@ -124,10 +124,10 @@ func typeswitch(x reflect.Value, lastitem bool) string {
 				text += x.Elem().String()
 			case "bool":
 				text += strconv.FormatBool(x.Elem().Bool())
-			case "time.Time":
-				text += "(Change_to_VARCHAR)" //Reflecting to time.Time value doesn't seem to work as far as I can see.
-				//timestring, _ := reflect.ValueOf(x.Index(ii).Elem()).Interface().(time.Time)
-				//fmt.Println(timestring)
+			//case "time.Time":
+			//	text += "_datetime_(Change_to_VARCHAR)," //Reflecting to time.Time value doesn't seem to work as far as I can see.
+			//	//timestring, _ := reflect.ValueOf(x.Index(ii).Elem()).Interface().(time.Time)
+			//	//fmt.Println(timestring)
 			case "int64":
 				text += strconv.FormatInt(x.Elem().Int(), 10)
 			case "float64":
