@@ -46,8 +46,8 @@ func main() {
 }
 ```
 
-This library can't handle all formats (or at least i haven't figured out how to make it work yet) - for example datetime - so if you have a DATETIME output in SQL just change it to VARCHAR and it will work.
-Any format it cannot handle it will let you know by replacing all items in the column to 'CHANGE_TO_VARCHAR(255)' or something similar.
+This library currently can't handle all types - for example datetime - so if you have a DATETIME output in SQL just change it to VARCHAR(255) and it will work.
+Any format it cannot handle it will let you know by replacing all items in the column to 'CHANGE_TO_VARCHAR'. So then you can just adjust the SQL query slightly.
 
 
 
