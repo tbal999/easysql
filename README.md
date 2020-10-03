@@ -1,5 +1,5 @@
 # easysql - developed on 26th Sep.
-Easily work with sql in go with this!
+Easily work with SQL in go with this!
 Currently uses the MSSQL driver: github.com/denisenkom/go-mssqldb
 But you can fork it and replace it with another driver (i think)
 
