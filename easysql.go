@@ -20,6 +20,7 @@ func SQLquery(access, q string) (int, []string, error) {
 	//connString := `Server=localhost;Database=master;Trusted_Connection=True;`
 	var err error
 	db, err = sql.Open("sqlserver", access)
+	defer db.Close()
 	if err != nil {
 		log.Fatal("Error creating connection pool: ", err.Error())
 	}
